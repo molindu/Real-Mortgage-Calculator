@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Plusjakaratabold;
+    src: url("../src/assets/fonts/static/PlusJakartaSans-Bold.ttf") ;
+}
+
+@font-face {
+    font-family: Plusjakaratamedium;
+    src: url("./assets/fonts/static/PlusJakartaSans-Medium.ttf") ;
+}
+
+@theme{
+    --font-plusbold: Plusjakaratabold, "sans-serif";
+    --font-plusmedium: Plusjakaratamedium, "sans-serif";
+
+}
