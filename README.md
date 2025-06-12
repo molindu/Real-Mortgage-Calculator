@@ -16,8 +16,8 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
 
 ### Links
 
-- Solution URL: [solution URL here](https://github.com/molindu/Mortgage-Calculator.git)
-- Live Site URL: [live site URL here](https://molindu.github.io/Mortgage-Calculator/)
+- Solution URL: [solution URL here](https://molindu.github.io/Real-Mortgage-Calculator/)
+- Live Site URL: [live site URL here](https://molindu.github.io/Real-Mortgage-Calculator/)
 
 ## My process
 
@@ -32,7 +32,7 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
 
 ## Author
 
-- Website - [Molindu Yasoda](https://github.com/molindu/Mortgage-Calculator.git)
+- Website - [Molindu Yasoda](https://github.com/molindu/Real-Mortgage-Calculator.git)
 
 ## Other project for references
 
