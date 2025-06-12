@@ -1,17 +1,173 @@
 @import "tailwindcss";
 
+body {
+    font-size: 16px;
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+}
+
+#root {
+    @apply min-h-screen;
+}
+
 @font-face {
-    font-family: Plusjakaratabold;
+    font-family: Plus-jakarata-bold;
     src: url("../src/assets/fonts/static/PlusJakartaSans-Bold.ttf") ;
 }
 
 @font-face {
-    font-family: Plusjakaratamedium;
+    font-family: Plus-jakarata-medium;
     src: url("./assets/fonts/static/PlusJakartaSans-Medium.ttf") ;
 }
 
 @theme{
-    --font-plusbold: Plusjakaratabold, "sans-serif";
-    --font-plusmedium: Plusjakaratamedium, "sans-serif";
+    --font-plus-bold: Plus-jakarata-bold, "sans-serif";
+    --font-plus-medium: Plus-jakarata-medium, "sans-serif";
+
+    --color-Lime: hsl(61, 70%, 52%);
+    --color-Lime-Light: hsl(61, 70%, 72%);
+    --color-Red: hsl(4, 69%, 50%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-slate-100: hsl(202, 86%, 94%);
+    --color-slate-300: hsl(203, 41%, 72%);
+    --color-slate-500: hsl(200, 26%, 54%);
+    --color-slate-700: hsl(200, 24%, 40%);
+    --color-slate-900: hsl(202, 55%, 16%);
+    /*--breakpoint-sm: 375px;*/
+    --breakpoint-2xl: 1440px;
+    --text-sm: 1.15rem;
+
+}
+@layer base {
+    main {
+        @apply flex items-center justify-center min-h-screen ;
+    }
+}
+
+@layer components {
+    .form-control {
+        @apply p-4 flex w-full gap-6 flex-col flex-1;
+    }
+
+    .form-header {
+        @apply flex items-start sm:items-center justify-between gap-4 flex-col sm:flex-row
+    }
+
+    .form-header h1 {
+        @apply font-plus-bold text-2xl;
+    }
+
+    .form-header button {
+        @apply underline bg-transparent;
+    }
+
+    .form-header button:hover {
+        @apply text-slate-700;
+    }
+
+    .form-input {
+        @apply flex flex-col gap-2;
+    }
+
+    .form-input label {
+        @apply text-sm text-slate-700;
+    }
+
+    .form-input input {
+        @apply py-3 px-4 rounded-r-[5px] w-full bg-white outline-none ;
+    }
+
+    .form-input span {
+        @apply text-Red;
+    }
+
+    .input-error {
+        @apply not-focus-within:!border-Red not-focus-within:!bg-Red;
+    }
+
+    .input-container {
+        @apply bg-slate-300 rounded-[5px]
+        focus-within:bg-Lime flex flex-row
+        items-center justify-center border
+        border-slate-700
+        focus-within:border-Lime;
+    }
+
+    .input-container span {
+        @apply text-sm text-slate-900 font-plus-bold px-4 ;
+    }
+
+    .input-type {
+        @apply flex gap-3 py-3 px-4 border border-slate-700 rounded-[5px] ;
+    }
+
+    .input-type:hover {
+        @apply border-Lime;
+    }
+
+    .input-type input {
+        @apply w-4 accent-Lime;
+    }
+
+    .type-style {
+        @apply flex flex-col gap-3 text-sm;
+    }
+
+    .type-style label {
+        @apply text-slate-700 ;
+    }
+
+    .submit {
+        @apply flex flex-row
+        bg-Lime rounded-full w-full
+        sm:w-5/6 px-4 py-3 text-sm
+        font-plus-bold gap-3 items-center justify-center
+    }
+
+    .submit:hover {
+        @apply bg-Lime-Light;
+    }
+
+    .details {
+        @apply flex flex-col flex-1 gap-3
+        text-sm sm:rounded-r-xl sm:rounded-bl-[20%]
+        bg-slate-900 text-white items-center
+        justify-center p-4 sm:p-8;
+    }
+
+    .details img {
+        @apply w-1/3;
+    }
+
+    .details h1 {
+        @apply text-[24px];
+    }
+
+    .details p {
+        @apply text-slate-500 text-[16px] text-center;
+    }
+
+    .type-style span {
+        @apply text-Red text-[16px]
+    }
+
+    .results {
+        @apply items-start justify-start p-8 sm:p-12 text-[24px];
+    }
+
+    .results p {
+        @apply text-start text-slate-300;
+    }
+
+    .results-values {
+        @apply flex flex-col gap-8 p-8 rounded-lg border-t-Lime border-t-2 bg-[#0d2330] mt-6 ;
+    }
+    .results-values h3 {
+        @apply text-[16px] text-slate-300;
+    }
+     .values{
+        @apply text-5xl;
+    }
+
 
 }
