@@ -34,7 +34,7 @@ const Form = ({setResult}: FormProps) => {
         }
     })
 
-    const clearAll = (e) => {
+    const clearAll = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
         setResult(null)
         reset()
@@ -76,7 +76,7 @@ const Form = ({setResult}: FormProps) => {
                     <span>&pound;</span>
                     <input
                         type="number"
-                        name="mortgageAmount"
+                        // name="mortgageAmount"
                         min={0}
                         {...register("mortgageAmount")}
                     />
@@ -89,7 +89,7 @@ const Form = ({setResult}: FormProps) => {
                     <div className={`input-container ${errors.mortgageTerm && 'input-error'}`}>
                         <input
                             type="number"
-                            name="mortgageTerm"
+                            // name="mortgageTerm"
                             min={0}
                             max={100}
                             {...register("mortgageTerm")}
@@ -104,7 +104,7 @@ const Form = ({setResult}: FormProps) => {
                     <div className={`input-container ${errors.interestRate && 'input-error'}`}>
                         <input
                             type="number"
-                            name="interestRate"
+                            // name="interestRate"
                             min="0"
                             max="100"
                             step="0.01"
@@ -188,7 +188,7 @@ const Form = ({setResult}: FormProps) => {
             </div>
             <div>
                 <button className={'submit'} type={'submit'}>
-                    <img src={'/images/icon-calculator.svg'} alt={'calculator icon'}/>
+                    <img src={'images/icon-calculator.svg'} alt={'calculator icon'}/>
                     Calculate Repayments
                 </button>
             </div>
